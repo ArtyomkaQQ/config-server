@@ -7,10 +7,20 @@ eureka:
   instance:
     hostname: localhost
     
-spring:
+spring:     
   datasource:
     username: postgres
     url: jdbc:postgresql://localhost:5432/department
     driverClassName: org.postgresql.Driver
     platform: postgres
     password: password
+
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    open-in-view: true
+    hibernate:
+      ddl-auto: validate
+
+  liquibase:
+    change-log: classpath:/db/changelog/db.changelog.xml
