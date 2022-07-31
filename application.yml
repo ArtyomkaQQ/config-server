@@ -9,10 +9,10 @@ eureka:
     
 spring:     
   datasource:
-    username: postgres
-    url: jdbc:postgresql://localhost:5432/department
     driverClassName: org.postgresql.Driver
     platform: postgres
+    url: jdbc:postgresql://localhost:5432/department
+    username: postgres
     password: password
 
   jpa:
